@@ -13,7 +13,7 @@
       ]
    }
    ```
-   
+
 [![NPM](https://img.shields.io/npm/v/%40twilio/voice-react-native-sdk.svg?color=blue)](https://www.npmjs.com/package/%40twilio/voice-react-native-sdk) [![CircleCI](https://dl.circleci.com/status-badge/img/gh/twilio/twilio-voice-react-native/tree/main.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/twilio/twilio-voice-react-native/tree/main)
 
 Twilio's Voice React Native SDK allows you to add real-time voice and PSTN calling to your React Native apps.
@@ -52,67 +52,8 @@ This is a forked version of the Twilio Voice React Native SDK. If you need to bu
 1. **Install Dependencies**:
 
    ```bash
-   yarn install
+   npm install github:Ljonghwan/twilio-voice-react-native-expo
    ```
-
-2. **Build the Package**:
-
-   ```bash
-   yarn prepare
-   ```
-
-   This command will:
-
-   - Generate constants from source files
-   - Build CommonJS, ES modules, and TypeScript definitions
-   - Create source maps for debugging
-   - Output files to the `lib/` directory
-
-3. **Verify Build Output**:
-   Check that the following directories are created:
-   - `lib/commonjs/` - CommonJS modules
-   - `lib/module/` - ES modules
-   - `lib/typescript/` - TypeScript definitions
-
-### Publishing to NPM
-
-1. **Update Version**:
-   Edit `package.json` and increment the version number:
-
-   ```json
-   {
-     "version": "1.6.2-fork.2" // Increment from previous version
-   }
-   ```
-
-2. **Verify Package Configuration**:
-   Ensure your `package.json` has the correct:
-
-   - Package name (e.g., `@your-username/voice-react-native-sdk`)
-   - Repository URLs pointing to your fork
-   - Author information
-
-3. **Login to NPM**:
-
-   ```bash
-   npm login
-   ```
-
-4. **Publish the Package**:
-   ```bash
-   npm publish --access public
-   ```
-
-### Using Your Published Package
-
-Once published, you can install your forked version in any React Native project:
-
-```bash
-# Install your forked version
-npm install @your-username/voice-react-native-sdk
-# or
-yarn add @your-username/voice-react-native-sdk
-```
 
 Then import and use it exactly like the original Twilio SDK:
 
