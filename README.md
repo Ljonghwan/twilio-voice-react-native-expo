@@ -1,18 +1,5 @@
 # Twilio Voice React Native SDK
 
-# app.json 
-   ```json
-   {
-      "voice-react-native-sdk/expo-config-plugin/ios.js",
-      [
-         "voice-react-native-sdk/expo-config-plugin/android.js",
-         {
-            "firebaseMessagingServiceEnabled": true,
-            "googleServicesJsonPath": "./google-services.json"
-         }
-      ]
-   }
-   ```
 
 [![NPM](https://img.shields.io/npm/v/%40twilio/voice-react-native-sdk.svg?color=blue)](https://www.npmjs.com/package/%40twilio/voice-react-native-sdk) [![CircleCI](https://dl.circleci.com/status-badge/img/gh/twilio/twilio-voice-react-native/tree/main.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/twilio/twilio-voice-react-native/tree/main)
 
@@ -28,11 +15,30 @@ Please check out the following if you are new to Twilio's Programmable Voice or 
 - [React Native](https://reactnative.dev/docs/getting-started)
 
 ## Installation
+# Confirmed to work on expo version 53.0.25
 
 The package is available through [npm](https://www.npmjs.com/package/@twilio/voice-react-native-sdk).
 
 ```sh
 npm install github:Ljonghwan/twilio-voice-react-native-expo
+```
+
+app.json 
+   ```json
+   {
+      "voice-react-native-sdk/expo-config-plugin/ios.js",
+      [
+         "voice-react-native-sdk/expo-config-plugin/android.js",
+         {
+            "firebaseMessagingServiceEnabled": true,
+            "googleServicesJsonPath": "./google-services.json"
+         }
+      ]
+   }
+   ```
+
+```sh
+npx expo prebuild --clean
 ```
 
 Then import and use it exactly like the original Twilio SDK:
