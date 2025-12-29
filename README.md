@@ -1,13 +1,19 @@
-"voice-react-native-sdk/expo-config-plugin/ios.js",
-[
-   "voice-react-native-sdk/expo-config-plugin/android.js",
-   {
-      "firebaseMessagingServiceEnabled": true,
-      "googleServicesJsonPath": "./google-services.json"
-   }
-],
 # Twilio Voice React Native SDK
 
+# app.json 
+   ```json
+   {
+      "voice-react-native-sdk/expo-config-plugin/ios.js",
+      [
+         "voice-react-native-sdk/expo-config-plugin/android.js",
+         {
+            "firebaseMessagingServiceEnabled": true,
+            "googleServicesJsonPath": "./google-services.json"
+         }
+      ]
+   }
+   ```
+   
 [![NPM](https://img.shields.io/npm/v/%40twilio/voice-react-native-sdk.svg?color=blue)](https://www.npmjs.com/package/%40twilio/voice-react-native-sdk) [![CircleCI](https://dl.circleci.com/status-badge/img/gh/twilio/twilio-voice-react-native/tree/main.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/twilio/twilio-voice-react-native/tree/main)
 
 Twilio's Voice React Native SDK allows you to add real-time voice and PSTN calling to your React Native apps.
