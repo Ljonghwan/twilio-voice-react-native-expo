@@ -32,28 +32,8 @@ Please check out the following if you are new to Twilio's Programmable Voice or 
 The package is available through [npm](https://www.npmjs.com/package/@twilio/voice-react-native-sdk).
 
 ```sh
-yarn add @twilio/voice-react-native-sdk
+npm install github:Ljonghwan/twilio-voice-react-native-expo
 ```
-
-Once the package has been installed to your React Native application, there are further steps that you will need to take for both iOS and Android platforms. Please see the supporting documentation below.
-
-## Building and Publishing New Versions
-
-This is a forked version of the Twilio Voice React Native SDK. If you need to build and publish new versions of this package to npm, follow these steps:
-
-### Prerequisites
-
-1. **Node.js and Yarn**: Ensure you have Node.js and Yarn installed
-2. **NPM Account**: You need to be logged into npm with the appropriate permissions
-3. **Git Repository**: Make sure your changes are committed to your fork
-
-### Build Process
-
-1. **Install Dependencies**:
-
-   ```bash
-   npm install github:Ljonghwan/twilio-voice-react-native-expo
-   ```
 
 Then import and use it exactly like the original Twilio SDK:
 
