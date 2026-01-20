@@ -262,7 +262,7 @@ class NotificationUtility {
     NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
     notificationManager.createNotificationChannelGroup(
       new NotificationChannelGroupCompat.Builder(Constants.VOICE_CHANNEL_GROUP)
-        .setName("Twilio Voice").build());
+        .setName("통화").build());
 
     for (String channelId:
       new String[]{
@@ -289,7 +289,7 @@ class NotificationUtility {
     final int notificationImportance = getChannelImportance(voiceChannelId);
     NotificationChannelCompat.Builder voiceChannelBuilder =
       new NotificationChannelCompat.Builder(voiceChannelId, notificationImportance)
-        .setName("Primary Voice Channel")
+        .setName("통화 알림")
         .setLightColor(Color.GREEN)
         .setGroup(Constants.VOICE_CHANNEL_GROUP);
     // low-importance notifications don't have sound
