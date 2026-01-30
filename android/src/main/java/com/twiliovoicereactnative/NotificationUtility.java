@@ -166,18 +166,16 @@ class NotificationUtility {
       callRecord.getUuid());
     PendingIntent piAcceptIntent = constructPendingIntentForActivity(context, acceptIntent);
 
-    NotificationCompat.Builder builder = constructNotificationBuilder(context, channelImportance)
+    return constructNotificationBuilder(context, channelImportance)
       .setSmallIcon(notificationResource.getSmallIconId())
       .setCategory(Notification.CATEGORY_CALL)
       .setAutoCancel(true)
       .setContentIntent(piForegroundIntent)
+      .setFullScreenIntent(piForegroundIntent, true)
       .addPerson(incomingCaller)
       .setStyle(NotificationCompat.CallStyle.forIncomingCall(
-        incomingCaller, piRejectIntent, piAcceptIntent));
-    if (isFullscreenIntentEnabled(context)) {
-      builder.setFullScreenIntent(piForegroundIntent, true);
-    }
-    return builder.build();
+        incomingCaller, piRejectIntent, piAcceptIntent))
+      .build();
   }
 
   public static Notification createCallAnsweredNotificationWithLowImportance(@NonNull Context context,
