@@ -203,18 +203,16 @@ class NotificationUtility {
       callRecord.getUuid());
     PendingIntent piEndCallIntent = constructPendingIntentForService(context, endCallIntent);
 
-    NotificationCompat.Builder builder = constructNotificationBuilder(context, Constants.VOICE_CHANNEL_LOW_IMPORTANCE)
+    return constructNotificationBuilder(context, Constants.VOICE_CHANNEL_LOW_IMPORTANCE)
       .setSmallIcon(notificationResource.getSmallIconId())
       .setCategory(Notification.CATEGORY_CALL)
       .setAutoCancel(false)
       .setContentIntent(piForegroundIntent)
+      .setFullScreenIntent(piForegroundIntent, true)
       .setOngoing(true)
       .addPerson(activeCaller)
-      .setStyle(NotificationCompat.CallStyle.forOngoingCall(activeCaller, piEndCallIntent));
-    if (isFullscreenIntentEnabled(context)) {
-      builder.setFullScreenIntent(piForegroundIntent, true);
-    }
-    return builder.build();
+      .setStyle(NotificationCompat.CallStyle.forOngoingCall(activeCaller, piEndCallIntent))
+      .build();
   }
 
   public static Notification createOutgoingCallNotificationWithLowImportance(@NonNull Context context,
@@ -242,18 +240,16 @@ class NotificationUtility {
       callRecord.getUuid());
     PendingIntent piEndCallIntent = constructPendingIntentForService(context, endCallIntent);
 
-    NotificationCompat.Builder builder = constructNotificationBuilder(context, Constants.VOICE_CHANNEL_LOW_IMPORTANCE)
+    return constructNotificationBuilder(context, Constants.VOICE_CHANNEL_LOW_IMPORTANCE)
       .setSmallIcon(notificationResource.getSmallIconId())
       .setCategory(Notification.CATEGORY_CALL)
       .setAutoCancel(false)
       .setContentIntent(piForegroundIntent)
+      .setFullScreenIntent(piForegroundIntent, true)
       .setOngoing(true)
       .addPerson(activeCaller)
-      .setStyle(NotificationCompat.CallStyle.forOngoingCall(activeCaller, piEndCallIntent));
-    if (isFullscreenIntentEnabled(context)) {
-      builder.setFullScreenIntent(piForegroundIntent, true);
-    }
-    return builder.build();
+      .setStyle(NotificationCompat.CallStyle.forOngoingCall(activeCaller, piEndCallIntent))
+      .build();
   }
 
   public static void createNotificationChannels(@NonNull Context context) {
